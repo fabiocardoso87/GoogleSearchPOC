@@ -131,11 +131,9 @@
   <ItemGroup>
     <Compile Include="Driver\Base.cs" />
     <Compile Include="Driver\BrowserFactory.cs" />
-    <Compile Include="Driver\Hooks.cs" />
     <Compile Include="Features\GoogleSearchSteps.cs" />
     <Compile Include="PageObjects\GoogleSearchPage.cs" />
     <Compile Include="PageObjects\GoogleSearchPageAsserter.cs" />
-    <Compile Include="Tests\GoogleSearchTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helper\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
