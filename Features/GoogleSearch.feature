@@ -9,5 +9,3 @@ Scenario: Google search successfully
 	Given I open google page
 	When I search for something interesting
 	Then I found results I was searching for
-
-

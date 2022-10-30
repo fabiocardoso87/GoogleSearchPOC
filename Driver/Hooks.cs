@@ -16,15 +16,14 @@ namespace GoogleSearch
     [Binding]
     public class Hooks
     {
-        public static IWebDriver Driver { get; private set; }
+        public static IWebDriver Driver { get; set; }
 
         [BeforeFeature]
         public static void BeforeScenario()
         {
             try
             {
-                Driver = new ChromeDriver();
-                // Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
+                Driver = new ChromeDriver(Environment.CurrentDirectory);
             }
             catch (DriverServiceNotFoundException erro)
             {
@@ -35,10 +34,10 @@ namespace GoogleSearch
                 Console.WriteLine("Ocorreu um erro genérico");
                 throw e;
             }
-            finally
-            {
-                Driver.Quit();
-            }
+            //finally
+            //{
+            //    Driver.Quit();
+            //}
         }
 
         [AfterFeature]
